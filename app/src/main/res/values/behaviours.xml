@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="behaviours">
+        <item>Transform</item>
+        <item>Room</item>
+        <item>Zone</item>
+        <item>Character</item>
+        <item>Lockable</item>
+        <item>Container</item>
+    </string-array>
+    <string-array name="behaviourClasses">
+        <item>be.khepri.adventure.game.behaviours.Transform</item>
+        <item>be.khepri.adventure.game.behaviours.Room</item>
+        <item>be.khepri.adventure.game.behaviours.Zone</item>
+        <item>be.khepri.adventure.game.behaviours.Character</item>
+        <item>be.khepri.adventure.game.behaviours.Lockable</item>
+        <item>be.khepri.adventure.game.behaviours.Container</item>
+    </string-array>
+    <string-array name="behaviourViews">
+        <item>be.khepri.adventure.ui.views.behaviours.BehaviourTransformView</item>
+        <item>be.khepri.adventure.ui.views.behaviours.BehaviourRoomView</item>
+        <item>be.khepri.adventure.ui.views.behaviours.BehaviourZoneView</item>
+        <item>be.khepri.adventure.ui.views.behaviours.BehaviourCharacterView</item>
+        <item>be.khepri.adventure.ui.views.behaviours.BehaviourLockableView</item>
+        <item>be.khepri.adventure.ui.views.behaviours.BehaviourContainerView</item>
+    </string-array>
+</resources>

@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Pocket Adventure</string>
+
+    <string name="title_activity_map">MapActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Description">Description</string>
+    <string name="Name">Name</string>
+    <string name="Room">Room</string>
+    <string name="Transform">Transform</string>
+    <string name="Zone">Zone</string>
+    <string name="Coordinates">Coordinates</string>
+    <string name="X">X</string>
+    <string name="Y">Y</string>
+    <string name="button_help">Help me</string>
+    <string name="button_create_mode">Create Mode</string>
+    <string name="button_play_mode">Play mode</string>
+    <string name="fragment_title_library">Library</string>
+    <string name="fragment_title_room">Room</string>
+    <string name="fragment_title_map">Map</string>
+    <string name="fragment_title_inventory">Inventory</string>
+    <string name="fragment_title_character">Character</string>
+    <string name="edit_game_object_short">...</string>
+</resources>

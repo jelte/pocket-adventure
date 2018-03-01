@@ -1,0 +1,34 @@
+package be.khepri.adventure.engine;
+
+import android.graphics.Color;
+
+import java.util.ArrayList;
+
+import be.khepri.adventure.engine.commands.Create;
+import be.khepri.adventure.engine.commands.Help;
+import be.khepri.adventure.engine.commands.Move;
+import be.khepri.adventure.ui.views.ConsoleView;
+
+public class CommandInterpreter {
+
+    private ArrayList<Command> commands = new ArrayList<>();
+
+    public CommandInterpreter()
+    {
+        commands.add(new Move());
+        commands.add(new Help());
+        commands.add(new Create());
+    }
+
+    public boolean interpret(String commandString)
+    {
+        commandString = commandString.toLowerCase();
+        for (Command command: commands) {
+            if (command.matches(commandString)) {
+                command.execute(commandString);
+                return true;
+            }
+        }
+        return false;
+    }
+}
