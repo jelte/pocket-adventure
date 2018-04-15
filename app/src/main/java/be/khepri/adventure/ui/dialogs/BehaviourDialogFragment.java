@@ -40,13 +40,20 @@ public class BehaviourDialogFragment extends DialogFragment {
         TypedArray classes = res.obtainTypedArray(R.array.behaviourClasses);
         TypedArray views = res.obtainTypedArray(R.array.behaviourViews);
 
+<<<<<<< HEAD
       //  builder.setView(numberPicker);
+=======
+>>>>>>> Alpha 1.0
         builder.setTitle("Add AbstractBehaviour");
         builder.setItems(R.array.behaviours, (dialog, which) -> {
             try {
                 activity.onAddBehaviour(new BehaviourWrapper<>(
                     names.getString(which),
+<<<<<<< HEAD
                     (AbstractBehaviour) Class.forName(classes.getString(which)).newInstance(),
+=======
+                    Class.forName(classes.getString(which)),
+>>>>>>> Alpha 1.0
                     Class.forName(views.getString(which))
                 ));
             } catch (java.lang.InstantiationException | IllegalAccessException | ClassNotFoundException e) {

@@ -30,4 +30,13 @@ public abstract class AbstractBehaviour extends Observable implements Behaviour
     @NonNull
     public UUID getId() { return id; }
     public void setId(@NonNull UUID id) { this.id = id; }
+<<<<<<< HEAD
+=======
+
+    protected synchronized void setChanged()
+    {
+        super.setChanged();
+        this.notifyObservers(this);
+    }
+>>>>>>> Alpha 1.0
 }

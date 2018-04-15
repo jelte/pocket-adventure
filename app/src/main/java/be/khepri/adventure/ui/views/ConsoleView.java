@@ -19,6 +19,12 @@ import java.util.function.Consumer;
 
 import be.khepri.adventure.R;
 import be.khepri.adventure.engine.Room;
+<<<<<<< HEAD
+=======
+import be.khepri.adventure.engine.World;
+import be.khepri.adventure.game.GameObject;
+import be.khepri.adventure.game.behaviours.Transform;
+>>>>>>> Alpha 1.0
 
 public class ConsoleView extends RelativeLayout implements TextView.OnEditorActionListener, View.OnLayoutChangeListener {
 
@@ -58,8 +64,11 @@ public class ConsoleView extends RelativeLayout implements TextView.OnEditorActi
         this.scrollLayout = rootView.findViewWithTag("console_scroll_layout");
         ((EditText) rootView.findViewWithTag("console_input")).setOnEditorActionListener(this);
         this.scrollLayout.addOnLayoutChangeListener(this);
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> Alpha 1.0
     }
 
     public void addLine(String response, int color)
@@ -88,7 +97,17 @@ public class ConsoleView extends RelativeLayout implements TextView.OnEditorActi
 
         addLine(" > " + command, Color.GREEN);
 
+<<<<<<< HEAD
         inputListeners.forEach(consoleInputListener -> consoleInputListener.onConsoleInput(this, command));
+=======
+        final ConsoleView view = this;
+        inputListeners.forEach(new Consumer<ConsoleInputListener>() {
+            @Override
+            public void accept(ConsoleInputListener consoleInputListener) {
+                consoleInputListener.onConsoleInput(view, command);
+            }
+        });
+>>>>>>> Alpha 1.0
 
         v.setText("");
         return true;
@@ -103,4 +122,8 @@ public class ConsoleView extends RelativeLayout implements TextView.OnEditorActi
         inputListeners.add(listener);
     }
     public void removeInputListener(ConsoleInputListener listener) { inputListeners.remove(listener); }
+<<<<<<< HEAD
+=======
+
+>>>>>>> Alpha 1.0
 }

@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
+<<<<<<< HEAD
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -12,6 +13,9 @@
         android:textStyle="bold" />
 
     <TextView
+=======
+    <!--TextView
+>>>>>>> Alpha 1.0
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Zone" />
@@ -20,7 +24,11 @@
         android:id="@+id/zone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:text="AutoCompleteTextView" />
+=======
+        android:text="AutoCompleteTextView" /-->
+>>>>>>> Alpha 1.0
 
     <TextView
         android:layout_width="match_parent"

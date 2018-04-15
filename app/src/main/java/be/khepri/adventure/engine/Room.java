@@ -22,9 +22,15 @@ public class Room extends Observable implements Observer
 
     public void add(List<GameObject> gameObjects) {
         for (GameObject gameObject : gameObjects) {
+<<<<<<< HEAD
             if (this.gameObject == null && gameObject.hasBehaviour(be.khepri.adventure.game.behaviours.Room.class.toString())) {
                 this.gameObject = gameObject;
             } else if (!contains.contains(gameObject)) {
+=======
+            if (this.gameObject == null && gameObject.hasBehaviour(be.khepri.adventure.game.behaviours.Room.class.getName())) {
+                this.gameObject = gameObject;
+            } else {
+>>>>>>> Alpha 1.0
                 gameObject.addObserver(this);
                 contains.add(gameObject);
             }
@@ -44,6 +50,7 @@ public class Room extends Observable implements Observer
         return this.transform;
     }
 
+<<<<<<< HEAD
     @Override
     public void update(Observable o, Object arg) {
         GameObject gameObject = (GameObject) o;
@@ -52,5 +59,22 @@ public class Room extends Observable implements Observer
             contains.remove(gameObject);
             this.notifyObservers(RoomAction.Left(gameObject));
         }*/
+=======
+    public be.khepri.adventure.game.behaviours.Room getBehaviour() {
+        if (gameObject == null) {
+            return null;
+        }
+        return (be.khepri.adventure.game.behaviours.Room) gameObject.getBehaviour(be.khepri.adventure.game.behaviours.Room.class.getName());
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+        GameObject gameObject = (GameObject) o;
+        if (!gameObject.getBehaviour(Transform.class.getName()).equals(this.transform)) {
+            gameObject.deleteObserver(this);
+            contains.remove(gameObject);
+            this.notifyObservers(RoomAction.Left(gameObject));
+        }
+>>>>>>> Alpha 1.0
     }
 }

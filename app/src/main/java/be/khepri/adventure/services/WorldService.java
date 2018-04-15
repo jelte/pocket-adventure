@@ -1,6 +1,7 @@
 package be.khepri.adventure.services;
 
 import android.app.Service;
+<<<<<<< HEAD
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -42,6 +43,52 @@ public class WorldService extends Service {
         }, new IntentFilter(MSG_TO_WORLD_SERVICE));
 
         sendBroadcast(new Intent(MSG_WORLD_SERVICE_INITIALIZED));
+=======
+import android.content.Intent;
+import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.IBinder;
+import android.os.Looper;
+import android.os.Message;
+import android.os.Process;
+
+import be.khepri.adventure.engine.CommandInterpreter;
+
+public class WorldService extends Service {
+
+    CommandInterpreter commandInterpreter = new CommandInterpreter();
+
+    private Looper mServiceLooper;
+    private ServiceHandler mServiceHandler;
+
+    // Handler that receives messages from the thread
+    private final class ServiceHandler extends Handler {
+        public ServiceHandler(Looper looper) {
+            super(looper);
+        }
+        @Override
+        public void handleMessage(Message msg) {
+
+            // Stop the service using the startId, so that we don't stop
+            // the service in the middle of handling another job
+            stopSelf(msg.arg1);
+        }
+    }
+
+    @Override
+    public void onCreate() {
+        // Start up the thread running the service.  Note that we create a
+        // separate thread because the service normally runs in the process's
+        // main thread, which we don't want to block.  We also make it
+        // background priority so CPU-intensive work will not disrupt our UI.
+        HandlerThread thread = new HandlerThread("ServiceStartArguments",
+                Process.THREAD_PRIORITY_BACKGROUND);
+        thread.start();
+
+        // Get the HandlerThread's Looper and use it for our Handler
+        mServiceLooper = thread.getLooper();
+        mServiceHandler = new ServiceHandler(mServiceLooper);
+>>>>>>> Alpha 1.0
     }
 
 

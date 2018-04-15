@@ -19,9 +19,16 @@
     <string-array name="behaviourViews">
         <item>be.khepri.adventure.ui.views.behaviours.BehaviourTransformView</item>
         <item>be.khepri.adventure.ui.views.behaviours.BehaviourRoomView</item>
+<<<<<<< HEAD
         <item>be.khepri.adventure.ui.views.behaviours.BehaviourZoneView</item>
         <item>be.khepri.adventure.ui.views.behaviours.BehaviourCharacterView</item>
         <item>be.khepri.adventure.ui.views.behaviours.BehaviourLockableView</item>
         <item>be.khepri.adventure.ui.views.behaviours.BehaviourContainerView</item>
+=======
+        <item>be.khepri.adventure.ui.views.behaviours.BehaviourNoPropertiesView</item>
+        <item>be.khepri.adventure.ui.views.behaviours.BehaviourNoPropertiesView</item>
+        <item>be.khepri.adventure.ui.views.behaviours.BehaviourNoPropertiesView</item>
+        <item>be.khepri.adventure.ui.views.behaviours.BehaviourNoPropertiesView</item>
+>>>>>>> Alpha 1.0
     </string-array>
 </resources>

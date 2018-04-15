@@ -25,16 +25,25 @@ public class GameObjectListViewAdapter extends ArrayAdapter<GameObject> {
     public View getView(int position, View view, @NonNull ViewGroup parent) {
 
         if (view == null) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> Alpha 1.0
             view = LayoutInflater.from(parent.getContext())
                     .inflate(resource, parent, false);
         }
 
         GameObject go = getItem(position);
 
+<<<<<<< HEAD
         TextView name = (TextView) view.findViewById(R.id.name);
         name.setText(go.getName());
         TextView description = (TextView) view.findViewById(R.id.description);
+=======
+        TextView name = view.findViewById(R.id.name);
+        name.setText(go.getName());
+        TextView description = view.findViewById(R.id.description);
+>>>>>>> Alpha 1.0
         description.setText(go.getDescription());
 
         return view;

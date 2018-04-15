@@ -17,9 +17,16 @@ public class Help implements Command
     }
 
     @Override
+<<<<<<< HEAD
     public void execute(String commandString) {
         //console.addLine("Loading help... please wait...", Color.YELLOW);
         Intent intent = new Intent(null, HelpActivity.class);
         startActivity(null, intent, null);
+=======
+    public void execute(String commandString, ConsoleView console) {
+        console.addLine("Loading help... please wait...", Color.YELLOW);
+        Intent intent = new Intent(console.getContext(), HelpActivity.class);
+        startActivity(console.getContext(), intent, null);
+>>>>>>> Alpha 1.0
     }
 }

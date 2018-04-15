@@ -1,17 +1,28 @@
 package be.khepri.adventure.engine.commands;
 
 import android.graphics.Color;
+<<<<<<< HEAD
 import android.os.AsyncTask;
+=======
+>>>>>>> Alpha 1.0
 
 import java.util.HashMap;
 import java.util.Map;
 
+<<<<<<< HEAD
 import be.khepri.adventure.engine.Command;
 import be.khepri.adventure.game.Direction;
 import be.khepri.adventure.game.GameObject;
 import be.khepri.adventure.game.Vector2D;
 import be.khepri.adventure.engine.World;
 import be.khepri.adventure.game.behaviours.Transform;
+=======
+import be.khepri.adventure.engine.Character;
+import be.khepri.adventure.engine.Command;
+import be.khepri.adventure.game.Direction;
+import be.khepri.adventure.game.Vector2D;
+import be.khepri.adventure.engine.World;
+>>>>>>> Alpha 1.0
 import be.khepri.adventure.ui.views.ConsoleView;
 
 public class Move implements Command
@@ -22,11 +33,16 @@ public class Move implements Command
     }
 
     @Override
+<<<<<<< HEAD
     public void execute(String commandString) {
+=======
+    public void execute(String commandString, ConsoleView console) {
+>>>>>>> Alpha 1.0
         String value = commandString.replaceAll("(move )?(("+String.join( ")|(", directions().keySet())+"))", "$2");
 
         final Direction direction = directions().get(value);
 
+<<<<<<< HEAD
         //console.addLine("Moving "+direction.toString().toLowerCase(), Color.WHITE);
         new AsyncTask<Void, Void, GameObject>() {
             @Override
@@ -56,6 +72,25 @@ public class Move implements Command
                 }
             }
         }.execute();
+=======
+        console.addLine("Moving "+direction.toString().toLowerCase(), Color.WHITE);
+
+        Character character = World.getInstance().getPlayer();
+        switch (direction) {
+            case NORTH:
+                character.move(Vector2D.UP);
+                break;
+            case EAST:
+                character.move(Vector2D.RIGHT);
+                break;
+            case SOUTH:
+                character.move(Vector2D.DOWN);
+                break;
+            case WEST:
+                character.move(Vector2D.LEFT);
+                break;
+        }
+>>>>>>> Alpha 1.0
     }
 
     private Map<String, Direction> directions() {

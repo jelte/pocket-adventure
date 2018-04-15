@@ -18,8 +18,13 @@ import static android.arch.persistence.room.ForeignKey.CASCADE;
         onDelete = CASCADE,
         onUpdate = CASCADE
 ))
+<<<<<<< HEAD
 public class Character extends AbstractBehaviour {
 
+=======
+public class Character extends AbstractBehaviour
+{
+>>>>>>> Alpha 1.0
     @ColumnInfo
     private String surname;
 
@@ -28,9 +33,16 @@ public class Character extends AbstractBehaviour {
     }
 
     public String getSurname() { return surname; }
+<<<<<<< HEAD
     public void setSurname(String surname) {
         this.surname = surname;
         this.setChanged();
         this.notifyObservers(this);
+=======
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+        this.setChanged();
+>>>>>>> Alpha 1.0
     }
 }

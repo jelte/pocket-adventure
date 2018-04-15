@@ -20,15 +20,28 @@ public class CommandInterpreter {
         commands.add(new Create());
     }
 
+<<<<<<< HEAD
     public boolean interpret(String commandString)
+=======
+    public boolean interpret(String commandString, ConsoleView console)
+>>>>>>> Alpha 1.0
     {
         commandString = commandString.toLowerCase();
         for (Command command: commands) {
             if (command.matches(commandString)) {
+<<<<<<< HEAD
                 command.execute(commandString);
                 return true;
             }
         }
+=======
+                command.execute(commandString, console);
+                return true;
+            }
+
+        }
+        console.addLine("Unknown Command: " + commandString, Color.RED);
+>>>>>>> Alpha 1.0
         return false;
     }
 }

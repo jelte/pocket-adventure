@@ -24,4 +24,26 @@
     <string name="fragment_title_inventory">Inventory</string>
     <string name="fragment_title_character">Character</string>
     <string name="edit_game_object_short">...</string>
+<<<<<<< HEAD
+=======
+    <string name="North">north</string>
+    <string name="East">east</string>
+    <string name="Conections">Connections</string>
+    <string name="Connections">Connections</string>
+    <string name="South">south</string>
+    <string name="West">west</string>
+    <string name="save">Save</string>
+    <string name="titleCreateGameObject">Create Game Object</string>
+    <string name="addBehaviour">Add behaviour</string>
+    <string name="titleUpdateGameObject">Update Game Object</string>
+    <string name="remove">X</string>
+    <string name="GoNorth">Go North</string>
+    <string name="GoEast">Go East</string>
+    <string name="GoSouth">Go South</string>
+    <string name="GoWest">Go West</string>
+    <string name="missing">Missing Room</string>
+    <string name="missing_description">Use the console command \"create here\" to add a new room at this position</string>
+    <string name="createRoom">Create Room</string>
+    <string name="Contains">Contains</string>
+>>>>>>> Alpha 1.0
 </resources>

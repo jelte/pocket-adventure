@@ -6,7 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 
 import be.khepri.adventure.R;
+<<<<<<< HEAD
 import be.khepri.adventure.services.WorldService;
+=======
+>>>>>>> Alpha 1.0
 
 public class MainActivity extends Activity {
 

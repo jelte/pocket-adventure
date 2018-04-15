@@ -36,4 +36,10 @@ public interface GameObjectDao {
 
     @Query("SELECT * FROM gameObject WHERE name like :query or description like :query")
     LiveData<List<GameObject>> search(String query);
+<<<<<<< HEAD
+=======
+
+    @Query("SELECT * FROM gameObject")
+    List<GameObject> findAll();
+>>>>>>> Alpha 1.0
 }

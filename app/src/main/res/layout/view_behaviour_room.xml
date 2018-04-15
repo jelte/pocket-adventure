@@ -6,6 +6,7 @@
     android:orientation="vertical">
 
     <TextView
+<<<<<<< HEAD
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Room"
@@ -35,5 +36,45 @@
         android:ems="10"
         android:inputType="textMultiLine"
         android:singleLine="false" />
+=======
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Connections" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/connection-north"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/North" />
+
+        <CheckBox
+            android:id="@+id/connection-east"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/East" />
+
+        <CheckBox
+            android:id="@+id/connection-south"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/South" />
+
+        <CheckBox
+            android:id="@+id/connection-west"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/West" />
+    </LinearLayout>
+>>>>>>> Alpha 1.0
 
 </LinearLayout>

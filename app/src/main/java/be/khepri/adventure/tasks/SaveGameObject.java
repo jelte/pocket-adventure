@@ -14,7 +14,10 @@ public class SaveGameObject extends AsyncTask<GameObject, Void, Void> {
 
     @Override
     protected Void doInBackground(GameObject... params) {
+<<<<<<< HEAD
         System.out.println("Updating gameObject");
+=======
+>>>>>>> Alpha 1.0
         database.updateGameObjects(params);
         return null;
     }

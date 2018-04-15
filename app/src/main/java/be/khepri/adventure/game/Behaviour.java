@@ -9,4 +9,9 @@ public interface Behaviour extends Serializable {
     UUID getId();
     void addObserver(Observer o);
     void deleteObserver(Observer o);
+<<<<<<< HEAD
+=======
+
+    void setId(UUID id);
+>>>>>>> Alpha 1.0
 }

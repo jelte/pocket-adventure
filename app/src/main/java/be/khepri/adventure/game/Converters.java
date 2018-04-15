@@ -29,4 +29,17 @@ public class Converters {
     public static String vector2DToString(Vector2D behaviour) {
         return new Gson().toJson(behaviour);
     }
+<<<<<<< HEAD
+=======
+
+    @TypeConverter
+    public static Direction[] directionsFromString(String value) {
+        return new Gson().fromJson(value, new TypeToken<Direction[]>() {}.getType());
+    }
+
+    @TypeConverter
+    public static String directionsToString(Direction[] directions) {
+        return new Gson().toJson(directions);
+    }
+>>>>>>> Alpha 1.0
 }
